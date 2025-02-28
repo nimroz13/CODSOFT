@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.calculator {
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #2196f3; /* Bright blue background */
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  background-color: #e6f4ff;
+  height: 100px; /* Increased height to accommodate two lines */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Changed to column to stack equation and result */
+  justify-content: space-between;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.equation {
+  width: 100%;
+  text-align: right;
+  font-size: 20px; /* Smaller font for equation */
+  color: #555;
+  min-height: 24px; /* Ensure space even when empty */
+  overflow-x: auto; /* Allow scrolling for long equations */
+  white-space: nowrap; /* Keep equation on one line */
+}
+
+.screen {
+  width: 100%;
+  text-align: right;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+/* Add a subtle indicator for keyboard focus */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #1976d2; /* Darker blue for buttons */
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #1565c0;
+}
+
+.btn:active {
+  background-color: #0d47a1;
+}
+
+.operator,
+.equals {
+  background-color: #1565c0;
+}
+
+.operator:hover,
+.equals:hover {
+  background-color: #0d47a1;
+}
+
+.clear,
+.backspace {
+  background-color: #f44336;
+}
+
+.clear:hover,
+.backspace:hover {
+  background-color: #d32f2f;
+}
+
+.zero {
+  grid-column: span 1;
+}
+
+.divide {
+  grid-column: span 1;
+}
+
+.backspace {
+  grid-column: span 1;
+}
