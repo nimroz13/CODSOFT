@@ -65,3 +65,23 @@ a:hover {
 .main {
     padding-left: 200px;
 }
+.footer {
+  width: 100%;
+  background-color: rgb(20, 18, 30);
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+}
+
+.footer a {
+  color: aqua;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #59deeb;
+}
